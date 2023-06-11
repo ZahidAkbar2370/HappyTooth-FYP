@@ -1,0 +1,800 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav>a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+.topnav>a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav>a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* Top Nav Responsive */
+
+@media screen and (max-width: 600px) {
+    .topnav>a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .redbtn {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .right {
+        float: none;
+    }
+}
+
+
+/* end Top Nav Responsive */
+
+.redbtn {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 2px;
+    font-size: 9pt;
+    border-radius: 5px;
+}
+
+.right {
+    float: right;
+}
+
+
+/* Column container */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Create two unequal columns that sits next to each other */
+
+
+/* Sidebar/left column */
+
+.side {
+    flex: 30%;
+    /* Set the width of the sidebar */
+    background-color: #f1f1f1;
+    /* Grey background color */
+    padding: 20px;
+    /* Some padding */
+}
+
+
+/* Main column */
+
+.main {
+    flex: 70%;
+    /* Set the width of the main content */
+    background-color: white;
+    /* White background color */
+    padding: 20px;
+    /* Some padding */
+}
+
+
+/* Main column full width */
+
+.mainfull {
+    flex: 100%;
+    /* Set the width of the main content */
+    padding: 20px;
+    /* Some padding */
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+.footer {
+    padding: 1px;
+    text-align: center;
+    /* Center text*/
+    background-color: #333;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.cardcolumn {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .cardcolumn {
+        width: 100%;
+        display: block;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardcontainer {
+    padding: 0 16px;
+}
+
+.cardcontainer::after,
+.cardrow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cardtitle {
+    color: grey;
+}
+
+.cardbutton {
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #d9534f;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+}
+
+.cardbutton:hover {
+    background-color: #da5c58;
+}
+
+
+/* Style inputs */
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date],
+input[type=tel],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #d9534f;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #da5c58;
+}
+
+input[type=button] {
+    background-color: #d9534f;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #da5c58;
+}
+
+.clear {
+    clear: both;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.right:hover .dropdown-content {
+    display: block;
+}
+
+.heroimg {
+    min-height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.teamcontainer {
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+
+.teamcontainer img {
+    border-radius: 10px;
+}
+
+.teamcontainer .team {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.teamcontainer .team .member {
+    width: 325px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    padding: 25px;
+}
+
+.teamcontainer .team .member img {
+    width: 200px;
+}
+
+.teamcontainer .team .member h3 {
+    color: #444;
+}
+
+.teamcontainer .team .member span {
+    font-size: 12px;
+    color: #999;
+}
+
+.teamcontainer .team .member p {
+    margin: 15px 0;
+    font-weight: 400;
+    color: #999;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.contactdiv input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contactdiv input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contactdiv input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contactdiv {
+    flex: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.contactrow {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+}
+
+
+/* Treatments Flip Cards */
+
+.flipcard {
+    position: relative;
+}
+
+.flipcard>.front,
+.flipcard>.back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+}
+
+.flipcard>.front {
+    transform: rotateY(0deg);
+}
+
+.flipcard>.back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+}
+
+.flipcard:hover>.front {
+    transform: rotateY(180deg);
+}
+
+.flipcard:hover>.back {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.flipcard {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 1em;
+    width: 400px;
+}
+
+.flipcard>.front,
+.flipcard>.back {
+    display: block;
+    color: white;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 220px;
+    padding: 1em 2em;
+    background: #313131;
+    border-radius: 10px;
+}
+
+.flipcard>.front p,
+.flipcard>.back p {
+    font-size: 0.9125rem;
+    line-height: 160%;
+    color: #999;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background-color: #d9534f;
+    margin: 4px;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: #000;
+}
+
+.dropdown:hover .arrow {
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.arrowdown {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.button {
+    background-color: #007399;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0099cc;
+}
+
+.mini {
+    padding: 4px 10px;
+    font-size: 12pt;
+    text-decoration: none;
+    margin: 3px 2px;
+}
+
+.clgreen {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+
+/* Green */
+
+.clgreen:hover {
+    background-color: #5fb962;
+}
+
+.clblue {
+    background-color: #008CBA;
+    color: #fff;
+}
+
+
+/* Blue */
+
+.clblue:hover {
+    background-color: #00ace6;
+}
+
+.clred {
+    background-color: #f44336;
+    color: #fff;
+}
+
+
+/* Red */
+
+.clred:hover {
+    background-color: #f66055;
+}
+
+.clgray {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+
+/* Gray */
+
+.clgray:hover {
+    background-color: #f2f2f2;
+}
+
+.clblack {
+    background-color: #555555;
+    color: #fff;
+}
+
+
+/* Black */
+
+.clblack:hover {
+    background-color: #666666;
+}
+
+
+/* for three columns */
+
+.dashcol33 {
+    flex: 30%;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* for two columns */
+
+.dashcol50 {
+    flex: 50%;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* for single column */
+
+.dashcol {
+    flex: 100%;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.dashboard>h1 {
+    font-size: 25pt;
+    text-align: center;
+    color: #100e0e;
+    /* background-color: #4CAF50; */
+    padding: 15px 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.row>.dashcol33>h2 {
+    font-size: 14pt;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.heroimgdash {
+    min-height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.dashtable {
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    font-size: 15pt;
+}
+
+.dashtable td,
+.dashtable th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+.dashtable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.dashtable tr:hover {
+    background-color: #ddd;
+}
+
+.dashtable th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    background-color: #34857e;
+    color: rgb(18, 1, 1);
+}
+
+.dashimg {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 50px;
+    text-align: center;
+}
